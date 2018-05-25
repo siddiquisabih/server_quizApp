@@ -11,6 +11,10 @@ mongoose.connect('mongodb://localhost/quiz_app')
 
 app.use(bodyParser.json())
 
+
+
+
+
 route(app)
 
 app.listen(port, () => { console.log('server is running on port ', port) })
