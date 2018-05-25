@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const port = process.env.port || 3050
 const bodyParser = require('body-parser')
-const route = require("./src/routes/authRoutes/authRoute")
+const route = require("./src/routes/quizRoute/route")
+
 
 const mongoose = require('mongoose')
 

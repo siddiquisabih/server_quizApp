@@ -1,6 +1,5 @@
-
 const authSchema = require("../../schema/authSchema/authSchema")
- 
+
 
 
 module.exports = {
@@ -31,17 +30,19 @@ module.exports = {
                 })
         }
     },
+
+
     loginUser: (req, res, next) => {
         var data = req.body
         if (data) {
-            authSchema.find({ username: data.username})
+            authSchema.find({ username: data.username })
                 .then((response) => {
                     if (response[0] !== undefined) {
                         response[0].username == data.username && response[0].password == data.password ?
-                        res.send({ login: true, data: response[0]  }) : res.send({login : false , data : null , message : 'invalid id and password'})
+                            res.send({ login: true, data: response[0] }) : res.send({ login: false, data: null, message: 'invalid id and password' })
                     }
                     else {
-                        res.send({ login: false, data: null, message : 'Create your account first' })
+                        res.send({ login: false, data: null, message: 'Create your account first' })
                     }
                 })
                 .catch((err) => {
@@ -49,4 +50,7 @@ module.exports = {
                 })
         }
     }
+
+    
+
 }
