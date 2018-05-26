@@ -13,6 +13,7 @@ module.exports = {
         var data = req.body
         createQuiz.create(data)
             .then((response) => {
+                //yahan pay wapis save karana hai ek code jo quiz invitation code hoga.
                 res.send({ message: 'quiz created' })
             })
             .catch((err) => {
