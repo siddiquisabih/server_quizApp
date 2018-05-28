@@ -45,14 +45,17 @@ const quiz = new schema({
     },
     userId: {
         type: String
+    },
+    courseCode: {
+        type: String,
     }
 })
 
- 
 
 
-const createQuiz = mongoose.model('CreateQuiz', quiz)
-module.exports = createQuiz
+
+const createQuizSchema = mongoose.model('CreateQuiz', quiz)
+module.exports = createQuizSchema
 
 
 

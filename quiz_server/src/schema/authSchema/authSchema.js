@@ -19,6 +19,10 @@ const signup = new schema({
         type: String,
         lowercase: true,
         match: [/\S+@\S+\.\S+/, 'is invalid'],
+    },
+    userId: {
+        type: String
+
     }
 })
 
