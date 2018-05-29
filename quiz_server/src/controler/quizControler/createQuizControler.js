@@ -8,7 +8,6 @@ const createQuizSchema = require('../../schema/quizSchema/createQuiz')
 module.exports = {
     //create quiz
 
-
     createQuiz: (req, res, next) => {
         var data = req.body
         createQuizSchema.create(data)
@@ -32,17 +31,22 @@ module.exports = {
     getAllCreatedQuiz: (req, res, next) => {
         var userId = req.params.userId
         if (userId !== undefined || userId !== null) {
-            createQuizSchema.find({ userId: userId })
+            createQuizSchema.find({ createdById: userId })
                 .then((response) => {
                     res.send({ response })
                 })
-
-
         }
+    },
+
+    requestForQuiz: (req, res, next) => {
+        
+        var userId = req.params.userId
+        var courseCode = req.params.courseCode
+
+        
 
 
 
-    }
 
-
+     }
 }

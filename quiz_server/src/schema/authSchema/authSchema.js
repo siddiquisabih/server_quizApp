@@ -22,7 +22,6 @@ const signup = new schema({
     },
     userId: {
         type: String
-
     }
 })
 

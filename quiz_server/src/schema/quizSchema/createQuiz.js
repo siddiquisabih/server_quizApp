@@ -23,6 +23,24 @@ const questionFormat = new schema({
 
 
 
+
+const attemptByFormat = new schema({
+    userId: {
+        type: String,
+        required: true
+    },
+    userName: {
+        type: String,
+        required: true
+    },
+    userEmail: {
+        type: String
+    }
+})
+
+
+
+
 const quiz = new schema({
 
     subject: {
@@ -43,11 +61,17 @@ const quiz = new schema({
         type: String,
         required: true
     },
-    userId: {
+    createdById: {
+        type: String
+    },
+    createdByName: {
         type: String
     },
     courseCode: {
         type: String,
+    },
+    attemptBy: {
+        type: [attemptByFormat]
     }
 })
 

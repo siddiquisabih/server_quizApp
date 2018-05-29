@@ -16,6 +16,9 @@ module.exports = (app) => {
     //get All Quiz for user which is created by them
     app.get('/api/quiz/getAllCreatedQuiz/:userId', quizControler.getAllCreatedQuiz)
 
+    //request for quiz
+    app.get('/api/quiz/requestForQuiz/:userId/:courseCode' , quizControler.requestForQuiz)
+
 
 
 
