@@ -1,4 +1,5 @@
-const createQuizSchema = require('../../schema/quizSchema/createQuiz')
+const createQuizSchema = require('../../schema/quizSchema/quizSchema')
+
 
 
 
@@ -38,15 +39,5 @@ module.exports = {
         }
     },
 
-    requestForQuiz: (req, res, next) => {
-        
-        var userId = req.params.userId
-        var courseCode = req.params.courseCode
 
-        
-
-
-
-
-     }
 }

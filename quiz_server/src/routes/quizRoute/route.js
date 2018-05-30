@@ -1,5 +1,5 @@
 const authControler = require('../../controler/authControler/authControler')
-const quizControler = require("../../controler/quizControler/createQuizControler")
+const quizControler = require("../../controler/quizControler/quizControler")
 
 
 module.exports = (app) => {
