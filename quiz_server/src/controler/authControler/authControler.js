@@ -7,6 +7,7 @@ module.exports = {
     createUserAccount: (req, res, next) => {
         var data = req.body
         if (data) {
+            console.log(data)
             authSchema.find({ username: data.username })
                 .then((response) => {
                     if (response[0] === undefined) {

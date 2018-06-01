@@ -39,5 +39,9 @@ module.exports = {
         }
     },
 
+    requestForQuiz: (req, res, next) => {
+
+    }
+
 
 }
